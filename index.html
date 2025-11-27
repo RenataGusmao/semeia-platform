@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Semeia+ — Login</title>
+  <link rel="icon" type="image/png" href="logo-semeia.png">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body data-page="login">
   <header class="topbar">
     <div class="brand">
@@ -19,22 +22,12 @@
     </nav>
   </header>
 
+  <!-- HERO COM FUNDO viva+.png E APENAS O CARD DE LOGIN -->
   <main class="hero">
     <div class="hero-inner">
-      <section class="hero-copy">
-        <h1>Acesse o Semeia+</h1>
-        <p>Plataforma digital para registrar, acompanhar e dar transparência à distribuição de sementes para a agricultura familiar.</p>
-        <ul>
-          <li>Cadastro de demandas por agricultores e cooperativas;</li>
-          <li>Acompanhamento por status (recebido, análise, expedição, entrega);</li>
-          <li>Rastreio por QR Code em cada envio;</li>
-          <li>Portal de transparência com histórico de entregas.</li>
-        </ul>
-      </section>
-
-      <section class="panel card">
+      <section class="card">
         <h2>Acesso ao sistema</h2>
-        <p class="help">Entre com seu usuário e senha. O perfil geral acessa apenas o portal de transparência.</p>
+        <p class="help">Entre com seu usuário e senha.</p>
 
         <form id="formLogin" class="grid" autocomplete="off">
           <div>
@@ -62,10 +55,10 @@
     </div>
   </main>
 
-  <footer>© 2025 Semeia+ — Agricultura familiar com rastreabilidade e transparência.</footer>
-  <div id="toast" class="toast"></div>
+  <footer>
+    © 2025 Semeia+ — Agricultura familiar com rastreabilidade e transparência.
+  </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
-  <script src="script.js"></script>
+  <div id="toast" class="toast"></div>
 </body>
 </html>
