@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semeia+ — Cadastro da demanda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cadastro-demanda">
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo-semeia.png" alt="Logo Semeia+">
+    </div>
+    <nav>
+      <a href="acompanhamento.html">Acompanhamento</a>
+      <a href="portal-transparencia.html">Transparência</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="quem-somos.html">Quem somos</a>
+      <a href="javascript:void(0)" onclick="logout()">Sair</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card" style="max-width:760px;margin:auto;">
+      <h1>Cadastro de demanda</h1>
+      <p class="help" id="saudacao">Cadastre novas solicitações de sementes abaixo.</p>
+
+      <form id="formDemanda" class="grid mt-16" autocomplete="off">
+        <div>
+          <label for="agricultor">Nome do agricultor / cooperativa</label>
+          <input id="agricultor" class="input" required>
+        </div>
+        <div class="cols-2">
+          <div>
+            <label for="cultura">Cultura</label>
+            <input id="cultura" class="input" required placeholder="Ex.: Milho, Feijão">
+          </div>
+          <div>
+            <label for="quantidade">Quantidade (sacas)</label>
+            <input id="quantidade" type="number" min="1" class="input" required>
+          </div>
+        </div>
+        <div>
+          <label for="obs">Observações (opcional)</label>
+          <textarea id="obs" class="input" placeholder="Ex.: Solo arenoso, entrega após reunião da associação..."></textarea>
+        </div>
+
+        <div style="display:flex;gap:10px;justify-content:flex-end;">
+          <button type="button" class="btn btn-secondary" onclick="window.location.href='acompanhamento.html'">Cancelar</button>
+          <button class="btn btn-primary">Enviar solicitação</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Modal de confirmação -->
+  <div id="modalConfirmacao" class="modal-bg hidden" role="dialog" aria-modal="true">
+    <div class="modal">
+      <h2>Confirmar envio</h2>
+      <p class="help">Confira os dados antes de confirmar o envio.</p>
+      <div id="resumoSolicitacao" class="mt-16"></div>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:18px;">
+        <button type="button" class="btn btn-secondary" id="btnCancelarModal">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="btnConfirmarModal">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 Semeia+ — Agricultura familiar com rastreabilidade e transparência.</footer>
+  <div id="toast" class="toast"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semeia+ — Criar conta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cadastro-usuario">
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo-semeia.png" alt="Logo Semeia+">
+    </div>
+    <nav>
+      <a href="index.html">Login</a>
+      <a href="cadastro-usuario.html" class="active">Criar conta</a>
+      <a href="portal-transparencia.html">Portal de Transparência</a>
+      <a href="quem-somos.html">Quem somos</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card" style="max-width:640px;margin:auto;">
+      <h1>Criar conta</h1>
+      <p class="help">Cadastre seu usuário para acessar o Semeia+.</p>
+
+      <form id="formCadastroUsuario" class="grid mt-16">
+        <div>
+          <label for="nome">Nome completo</label>
+          <input id="nome" class="input" required>
+        </div>
+        <div>
+          <label for="municipio">Município</label>
+          <input id="municipio" class="input" required>
+        </div>
+        <div class="cols-2">
+          <div>
+            <label for="usuario">Usuário</label>
+            <input id="usuario" class="input" required>
+          </div>
+          <div>
+            <label for="senha">Senha</label>
+            <input id="senha" type="password" class="input" required>
+          </div>
+        </div>
+        <div>
+          <label for="perfil">Perfil de acesso</label>
+          <select id="perfil" class="input" required>
+            <option value="">Selecione...</option>
+            <option value="agricultor">Agricultor</option>
+            <option value="cooperativa">Cooperativa</option>
+            <option value="geral">Geral (apenas transparência)</option>
+          </select>
+        </div>
+
+        <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:10px;">
+          <button type="button" class="btn btn-secondary" onclick="window.history.back()">Cancelar</button>
+          <button class="btn btn-primary">Criar conta</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2025 Semeia+ — Agricultura familiar com rastreabilidade e transparência.</footer>
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

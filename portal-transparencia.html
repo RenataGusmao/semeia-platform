@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semeia+ — Portal de Transparência</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="portal-transparencia">
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo-semeia.png" alt="Logo Semeia+">
+    </div>
+    <nav>
+      <a href="index.html">Login</a>
+      <a href="acompanhamento.html">Acompanhamento</a>
+      <a href="portal-transparencia.html" class="active">Transparência</a>
+      <a href="quem-somos.html">Quem somos</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Portal de Transparência</h1>
+      <p class="help">Histórico das entregas já realizadas no Semeia+. O objetivo é dar visibilidade pública às entregas concluídas.</p>
+
+      <div id="tabelaTransparencia" class="mt-16"></div>
+
+      <div style="margin-top:16px;display:flex;justify-content:flex-end;gap:10px;">
+        <button id="btnPDF" class="btn btn-primary">Exportar relatório em PDF</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Semeia+ — Portal de Transparência.</footer>
+  <div id="toast" class="toast"></div>
+
+  <!-- Biblioteca para gerar PDF a partir do HTML -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

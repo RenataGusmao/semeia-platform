@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semeia+ — Meu perfil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="perfil">
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo-semeia.png" alt="Logo Semeia+">
+    </div>
+    <nav>
+      <a href="acompanhamento.html">Acompanhamento</a>
+      <a href="portal-transparencia.html">Transparência</a>
+      <a href="perfil.html" class="active">Perfil</a>
+      <a href="quem-somos.html">Quem somos</a>
+      <a href="javascript:void(0)" onclick="logout()">Sair</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card" style="max-width:720px;margin:auto;">
+      <h1>Meu perfil</h1>
+      <p class="help">Estas informações ficam salvas apenas neste navegador e são usadas para personalizar a experiência.</p>
+
+      <div class="grid mt-16">
+        <div>
+          <label for="pNome">Nome</label>
+          <input id="pNome" class="input">
+        </div>
+        <div>
+          <label for="pMunicipio">Município</label>
+          <input id="pMunicipio" class="input">
+        </div>
+        <div>
+          <label for="pUsuario">Usuário</label>
+          <input id="pUsuario" class="input">
+        </div>
+        <div>
+          <label for="pPerfil">Perfil</label>
+          <select id="pPerfil" class="input">
+            <option value="agricultor">Agricultor</option>
+            <option value="cooperativa">Cooperativa</option>
+            <option value="geral">Geral (Transparência)</option>
+            <option value="admin">Administrador</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:18px;">
+        <button class="btn btn-secondary" onclick="window.history.back()">Voltar</button>
+        <button id="btnSalvarPerfil" class="btn btn-primary">Salvar</button>
+        <button class="btn btn-danger" onclick="logout()">Sair</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Semeia+ — Perfil do usuário.</footer>
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

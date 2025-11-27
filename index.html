@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semeia+ — Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo-semeia.png" alt="Logo Semeia+">
+    </div>
+    <nav>
+      <a href="index.html" class="active">Login</a>
+      <a href="cadastro-usuario.html">Criar conta</a>
+      <a href="portal-transparencia.html">Portal de Transparência</a>
+      <a href="quem-somos.html">Quem somos</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-inner">
+      <section class="hero-copy">
+        <h1>Acesse o Semeia+</h1>
+        <p>Plataforma digital para registrar, acompanhar e dar transparência à distribuição de sementes para a agricultura familiar.</p>
+        <ul>
+          <li>Cadastro de demandas por agricultores e cooperativas;</li>
+          <li>Acompanhamento por status (recebido, análise, expedição, entrega);</li>
+          <li>Rastreio por QR Code em cada envio;</li>
+          <li>Portal de transparência com histórico de entregas.</li>
+        </ul>
+      </section>
+
+      <section class="panel card">
+        <h2>Acesso ao sistema</h2>
+        <p class="help">Entre com seu usuário e senha. O perfil geral acessa apenas o portal de transparência.</p>
+
+        <form id="formLogin" class="grid" autocomplete="off">
+          <div>
+            <label for="user">Usuário</label>
+            <input id="user" class="input" required autocomplete="username">
+          </div>
+          <div>
+            <label for="pass">Senha</label>
+            <input id="pass" type="password" class="input" required autocomplete="current-password">
+          </div>
+          <button class="btn btn-primary" aria-label="Entrar no sistema">
+            Entrar
+          </button>
+        </form>
+
+        <p class="help" style="margin-top:12px;">
+          Ainda não tem acesso?
+          <a href="cadastro-usuario.html">Criar cadastro</a>
+        </p>
+
+        <p class="help" style="margin-top:6px;">
+          Admin padrão (mock): <strong>usuário:</strong> admin / <strong>senha:</strong> admin
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>© 2025 Semeia+ — Agricultura familiar com rastreabilidade e transparência.</footer>
+  <div id="toast" class="toast"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
